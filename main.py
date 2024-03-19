@@ -49,7 +49,7 @@ class Items(Resource):
 class Item(Resource):
     # Find an item by ID
     @marshal_with(cardFields)
-    def findById(self, pk):
+    def get(self, pk):
         return Card.query.filter_by(id=pk).first()
 
 api.add_resource(Items, "/")
