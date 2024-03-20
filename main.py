@@ -30,6 +30,10 @@ cardFields = {
     "batch": fields.String
 }
 
+class ItemImporter(Resource):
+    # TODO: Create a method to read all lines from .txt file and
+    # transform this data into a dic array, then insert that on database
+
 class Items(Resource):
     @marshal_with(cardFields)
     # Find all items
